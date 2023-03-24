@@ -1,0 +1,25 @@
+<div class="transactions">
+    <div class="title">Tools Status Per Province</div>
+    <div class="transaction-wrapper">
+      <div class="transaction" *ngFor="let transaction of transactions">
+        <div class="image">
+          <!--<img [src]="transaction.imgSrc" alt="" />-->
+          {{ transaction.id}}
+        </div>
+        <div class="title">{{ transaction.title }}</div>
+        <div class="shop-location">
+          <div class="location">{{ transaction.location }}</div>
+        </div>
+        <div
+          class="status"
+          [ngClass]="{
+            confirmed: transaction.status === 'available',
+            pending: transaction.status === 'requested',
+            shipped: transaction.status === 'out of stock'
+          }"
+        >
+          {{ transaction.status }}
+        </div>
+      </div>
+    </div>
+  </div>
