@@ -1,13 +1,14 @@
 <div class="nav-items">
-    <div class="nav-item">
-      <fa-icon [icon]="faDashboard"></fa-icon>
-      <span>Dashboard</span>
-    </div>
-    <!--
-       <div class="nav-item">
-      <fa-icon [icon]="faLocation"></fa-icon>
-      <span>Locations</span>
-    </div>
+  <div class="nav-item" routerLink="dashboard">
+    <fa-icon [icon]="faDashboard"></fa-icon>
+    <span>Dashboard</span>
+  </div>
+
+  <div class="nav-item" routerLink="register-tool">
+    <fa-icon [icon]="faLocation"></fa-icon>
+    <span>Add New Tools</span>
+  </div>
+  <!--
     <div class="nav-item">
       <fa-icon [icon]="faShop"></fa-icon>
       <span>Shops</span>
@@ -29,9 +30,10 @@
       <span>Contact</span>
     </div>
     -->
-   
-    <div class="nav-item">
-      <fa-icon [icon]="faHand"></fa-icon>
-      <span>Help</span>
-    </div>
+
+  <div class="nav-item">
+    <fa-icon [icon]="faHand"></fa-icon>
+    <span>Help</span>
   </div>
+</div>
+

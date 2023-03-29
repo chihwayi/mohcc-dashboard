@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { SidebarModule } from 'ng-cdbangular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,8 @@ import { AllToolsByProvincesComponent } from './all-tools-by-provinces/all-tools
 import { AllToolsByCatagoryComponent } from './all-tools-by-catagory/all-tools-by-catagory.component';
 import { TopThreeProvincesComponent } from './top-three-provinces/top-three-provinces.component';
 import { ChartModule } from 'angular-highcharts';
+import { RegisterToolComponent } from './register-tool/register-tool.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -25,13 +27,16 @@ import { ChartModule } from 'angular-highcharts';
     AllWarehouseToolsComponent,
     AllToolsByProvincesComponent,
     AllToolsByCatagoryComponent,
-    TopThreeProvincesComponent
+    TopThreeProvincesComponent,
+    RegisterToolComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ChartModule
+    ChartModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
