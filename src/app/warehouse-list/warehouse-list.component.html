@@ -1,0 +1,57 @@
+<!--
+<div class="panel-body" style="margin-left: 100px;margin-right: 100px;">
+    <table class="table table-hover table-sm table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Warehouse ID</th>
+                <th style="width:1%; white-space: nowrap;">Warehouse Tool Name</th>
+                <th style="width:1%; white-space: nowrap;">Program</th>
+                <th>Date Created</th>
+                <th>Language</th>
+                <th>Version</th>
+                <th>Available Quantities</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let availableTool of availableTools ">
+                <td>{{availableTool.warehouseId}}</td>
+                <td>{{availableTool.toolName}}</td>
+                <td>{{availableTool.programName}}</td>
+                <td>{{availableTool.dateCreated}}</td>
+                <td>{{availableTool.languagesName}}</td>
+                <td>{{availableTool.version}}</td>
+                <td>{{availableTool.quantityAvailable}}</td>
+            </tr>
+        </tbody><br>
+    </table>
+</div>
+-->
+<div class="container">
+    <div class="card">
+        <h3 class="text-center"> Tools List</h3>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Warehouse ID</th>
+                    <th style="width:1%; white-space: nowrap;">Warehouse Tool Name</th>
+                    <th style="width:1%; white-space: nowrap;">Program</th>
+                    <th>Date Created</th>
+                    <th>Language</th>
+                    <th>Version</th>
+                    <th>Available Quantities</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let availableTool of availableTools ">
+                        <td>{{availableTool.warehouseId}}</td>
+                        <td>{{availableTool.toolName}}</td>
+                        <td>{{availableTool.programName}}</td>
+                        <td>{{availableTool.dateCreated}}</td>
+                        <td>{{availableTool.languagesName}}</td>
+                        <td>{{availableTool.version}}</td>
+                        <td>{{availableTool.quantityAvailable}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

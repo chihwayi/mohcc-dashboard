@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarModule } from 'ng-cdbangular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { TopThreeProvincesComponent } from './top-three-provinces/top-three-prov
 import { ChartModule } from 'angular-highcharts';
 import { RegisterToolComponent } from './register-tool/register-tool.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WarehouseListComponent } from './warehouse-list/warehouse-list.component';
+import { TransferToolsComponent } from './transfer-tools/transfer-tools.component';
 
 
 @NgModule({
@@ -29,14 +33,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AllToolsByCatagoryComponent,
     TopThreeProvincesComponent,
     RegisterToolComponent,
-    DashboardComponent
+    DashboardComponent,
+    WarehouseListComponent,
+    TransferToolsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
     ChartModule,
-    SidebarModule
+    SidebarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,54 +1,69 @@
-<div class="containe mt-3">
-    <form>
-      <div class="row jumbotron box8">
-        <div class="col-sm-12 mx-t3 mb-4">
-          <h2 class="text-center text-info">Add New Tool</h2>
-        </div>
-        <!--
-        <div class="col-sm-6 form-group">
-          <label for="tool">Tool Name</label>
-          <input type="text" class="form-control" name="tool" id="tool" required>
-        </div>
-        -->
-        <div class="col-sm-6 form-group">
-            <label for="tool">Tool Name</label>
-              <select class="form-control" required>
-                  <option>Select a Tool</option>
-                  <option value="Tool 1">Tool 1</option>
-                  <option value="Tool 2">Tool 2</option>
-              </select>
-
-        </div>
-        <div class="col-sm-6 form-group">
-          <label for="language">Language</label>
-          <select class="form-control" required>
-            <option>Choose Language</option>
-            <option value="Language 1">Language 1</option>
-            <option value="Language 2">Language 2</option>
-        </select>
-        </div>
-        <div class="col-sm-6 form-group">
-          <label for="email">Quantity</label>
-          <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Enter Quantities" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <label for="address-2">Version</label>
-          <input type="text" class="form-control" name="version" id="version" placeholder="Version i.e V 1.2.5" required>
-        </div>
-        <!--
-        <div class="col-sm-4 form-group">
-          <label for="State">State</label>
-          <input type="address" class="form-control" name="State" id="State" placeholder="Enter your state name." required>
-        </div>
-        -->
-        <div class="col-sm-6 form-group">
-          <label for="Date">Date Entered</label>
-          <input type="Date" name="dateEntered" class="form-control" id="dateEntered" placeholder="Enter Date" required>
-        </div>
-        <div class="col-sm-12 form-group mb-0">
-          <button class="btn btn-primary float-right">Submit</button>
-        </div>
-  
+<div class="container mt-3">
+  <form [formGroup]="toolsForm" (ngSubmit)="save()">
+    <div class="row jumbotron box8">
+      <div class="col-sm-12 mx-t3 mb-4">
+        <h2 class="text-center text-info">Add New Tool</h2>
       </div>
-    </form>
-  </div>
+      <div class="col-sm-6 form-group">
+        <label for="tool">Tool Name</label>
+        <select class="form-control" formControlName="toolId" required>
+          <option>Select a Tool</option>
+          <option *ngFor="let tool of tools" [value]="tool.toolId">{{tool.toolName}}</option>
+        </select>
+
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="language">Language</label>
+        <select class="form-control" formControlName="languageId" required>
+          <option>Choose Language</option>
+          <option *ngFor=" let language of languages" [value]="language.languageId">{{language.languagesName}}
+          </option>
+        </select>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" name="quantity" id="quantity" formControlName="quantity" placeholder="Enter Quantities" required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="address-2">Version</label>
+        <input type="text" class="form-control" name="version" id="version" formControlName="version" placeholder="Version i.e V 1.2.5" required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="Date">Date Entered</label>
+        <input type="Date" name="dateEntered" class="form-control" id="dateEntered" formControlName="dateEntered" placeholder="Enter Date" required>
+      </div>
+      <div class="col-sm-12 form-group mb-0">
+        <button class="btn btn-primary float-right">Submit</button>
+      </div>
+
+    </div>
+  </form>
+
+  <div class="col col-md-4">
+      <div style="position: fixed">{{ preview }}</div>
+    </div>
+</div>
+<!--
+  <div class ="container">
+    <div class = "card">
+        <h3 class="text-center"> Users List</h3>
+        <div class = "card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th> First Name</th>
+                    <th> Last Name</th>
+                    <th> Email </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let user of tools">
+                        <td> {{ user.programId}}</td>
+                        <td> {{ user.toolId}}</td>
+                        <td> {{ user.toolName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+-->

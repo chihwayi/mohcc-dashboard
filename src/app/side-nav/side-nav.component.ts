@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import {
   faDashboard,
-  faLocation,
-  faShop,
-  faBox,
-  faMoneyBill,
-  faChartBar,
-  faContactBook,
   faHand,
+  faList,
+  faUpload,
+  faAdd,
+  faWarehouse,
+  faShare
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,12 +16,10 @@ import {
 })
 export class SideNavComponent {
   faDashboard = faDashboard;
-  faLocation = faLocation;
-  faShop = faShop;
-  faBox = faBox;
-  faMoneyBill = faMoneyBill;
-  faChartBar = faChartBar;
-  faContactBook = faContactBook;
   faHand = faHand;
-
+  faList = faList;
+  faUpload = faUpload;
+  faAdd = faAdd;
+  faWarehouse = faWarehouse;
+  faShare = faShare;
 }
