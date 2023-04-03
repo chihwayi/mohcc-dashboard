@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+        <h3 class="text-center">Available Tools in Warehouse</h3>
+        <div class="card-body">
+            <table class="table table-striped" style="width:100%">
+                <thead>
+                    <th style="width:30%">Tool Name</th>
+                    <th >Program</th>
+                    <th>Date Last Updated</th>
+                    <th>Language</th>
+                    <th>Version</th>
+                    <th>Total Available</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let warehouseQuantity of warehouseQuantities ">
+                        <td>{{warehouseQuantity.toolName}}</td>
+                        <td>{{warehouseQuantity.programName}}</td>
+                        <td style="text-align: center">{{warehouseQuantity.dateCreated}}</td>
+                        <td>{{warehouseQuantity.languagesName}}</td>
+                        <td style="text-align: center">{{warehouseQuantity.version}}</td>
+                        <td style="text-align: center">{{warehouseQuantity.quantityAvailable}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

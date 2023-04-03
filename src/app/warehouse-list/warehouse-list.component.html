@@ -28,27 +28,27 @@
 -->
 <div class="container">
     <div class="card">
-        <h3 class="text-center"> Tools List</h3>
+        <h3 class="text-center">Added Tools</h3>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-striped" style="width:100%">
                 <thead>
                     <th>Warehouse ID</th>
-                    <th style="width:1%; white-space: nowrap;">Warehouse Tool Name</th>
-                    <th style="width:1%; white-space: nowrap;">Program</th>
+                    <th style="width:30%">Tool Name</th>
+                    <th>Program</th>
                     <th>Date Created</th>
                     <th>Language</th>
                     <th>Version</th>
-                    <th>Available Quantities</th>
+                    <th>Added Quantities</th>
                 </thead>
                 <tbody>
                     <tr *ngFor="let availableTool of availableTools ">
-                        <td>{{availableTool.warehouseId}}</td>
+                        <td style="text-align: center">{{availableTool.warehouseId}}</td>
                         <td>{{availableTool.toolName}}</td>
                         <td>{{availableTool.programName}}</td>
                         <td>{{availableTool.dateCreated}}</td>
                         <td>{{availableTool.languagesName}}</td>
-                        <td>{{availableTool.version}}</td>
-                        <td>{{availableTool.quantityAvailable}}</td>
+                        <td style="text-align: center">{{availableTool.version}}</td>
+                        <td style="text-align: center">{{availableTool.quantityAvailable}}</td>
                     </tr>
                 </tbody>
             </table>

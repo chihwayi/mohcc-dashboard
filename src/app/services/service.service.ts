@@ -5,6 +5,7 @@ import { Warehouse } from '../models/warehouse.model';
 import { Tools } from '../models/tools.model';
 import { Languages } from '../models/languages.model';
 import { AvailableTools } from '../models/available-tools.model';
+import { Province } from '../models/province.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,15 @@ import { AvailableTools } from '../models/available-tools.model';
 export class ServiceService {
 
   private baseUrl = "http://localhost:8080/api/v1";
-  //private baseUrl = "http://localhost:8080/api/v1/tools";
 
   constructor(private http: HttpClient) { }
 
   getAllWarehouseTools():Observable<Warehouse[]>{
     return this.http.get<Warehouse[]>(`${this.baseUrl}/${"warehouse"}`);
+  }
+
+  getAllProvinces():Observable<Province[]>{
+    return this.http.get<Province[]>(`${this.baseUrl}/${"province"}`);
   }
 
   getAllTools():Observable<Tools[]>{
@@ -30,6 +34,10 @@ export class ServiceService {
 
   getAllAvailableToolsInWarehouse():Observable<AvailableTools[]>{
     return this.http.get<AvailableTools[]>(`${this.baseUrl}/${"list_warehouse"}`);
+  }
+
+  getAllAvailableQuantitesInWarehouse():Observable<AvailableTools[]>{
+    return this.http.get<AvailableTools[]>(`${this.baseUrl}/${"quantities"}`);
   }
 
   addWarehouseTool(warehouse:Warehouse):Observable<Warehouse[]>{

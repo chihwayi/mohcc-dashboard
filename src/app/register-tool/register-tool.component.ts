@@ -3,7 +3,7 @@ import { ServiceService } from '../services/service.service';
 import { Warehouse } from '../models/warehouse.model';
 import { Tools } from '../models/tools.model';
 import { Languages } from '../models/languages.model';
-import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-register-tool',
@@ -11,13 +11,6 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/f
   styleUrls: ['./register-tool.component.css']
 })
 export class RegisterToolComponent {
-
-  //public toolsForm! : FormGroup;
-  //toolId : number = 0;
-  //languageId : number = 0;
-  //quantity : number = 0;
-  //version : string = "";
-  //dateEntered : Date = new Date();
 
   warehouses!: Warehouse[];
   tools!: Tools[];

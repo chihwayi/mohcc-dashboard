@@ -19,6 +19,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WarehouseListComponent } from './warehouse-list/warehouse-list.component';
 import { TransferToolsComponent } from './transfer-tools/transfer-tools.component';
+import { WarehouseQuantitiesComponent } from './warehouse-quantities/warehouse-quantities.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { TransferToolsComponent } from './transfer-tools/transfer-tools.componen
     RegisterToolComponent,
     DashboardComponent,
     WarehouseListComponent,
-    TransferToolsComponent
+    TransferToolsComponent,
+    WarehouseQuantitiesComponent
   ],
   imports: [
     BrowserModule,
