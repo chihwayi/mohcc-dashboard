@@ -10,6 +10,7 @@
                     <th>Language</th>
                     <th>Version</th>
                     <th>Total Available</th>
+                    <th>Action</th>
                 </thead>
                 <tbody>
                     <tr *ngFor="let warehouseQuantity of warehouseQuantities ">
@@ -19,6 +20,19 @@
                         <td>{{warehouseQuantity.languagesName}}</td>
                         <td style="text-align: center">{{warehouseQuantity.version}}</td>
                         <td style="text-align: center">{{warehouseQuantity.quantityAvailable}}</td>
+                        <td>
+                            <tr>
+        
+                              <td><button  class='btn btn-primary' ><i class="fa fa-futboll-0">Disable/Enable</i></button></td>
+                          <td><button  class='btn btn-info'
+                            data-toggle="modal" data-target="#myModal">Update</button></td>
+                          </tr>
+                        <tr>
+                          <td> <button  class='btn btn-info'>User Roles</button></td>
+                          <td> <button  class='btn btn-info'>Renew</button></td>
+                            </tr>
+        
+                          </td>
                     </tr>
                 </tbody>
             </table>
