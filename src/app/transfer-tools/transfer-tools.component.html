@@ -118,7 +118,7 @@
       </div>
       <div class="col-sm-6 form-group">
         <label for="quantity">Quantity Available</label>
-        <input type="number" class="form-control" name="quantity" id="quantity" formControlName="quantity" readonly>
+        <input type="number" class="form-control" name="quantity" id="quantity" formControlName="quantity" [(ngModel)]="quantitiesAvailable" readonly>
       </div>
       <div class="col-sm-6 form-group">
         <label for="address-2">Quantity To Transfer</label>

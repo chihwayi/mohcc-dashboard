@@ -40,6 +40,10 @@ export class ServiceService {
     return this.http.get<AvailableTools[]>(`${this.baseUrl}/${"quantities"}`);
   }
 
+  getAllAvailableQuantitesInWarehouseByID(id:number):Observable<AvailableTools[]>{
+    return this.http.get<AvailableTools[]>(`${this.baseUrl}/${"quantities"}/${id}`);
+  }
+
   addWarehouseTool(warehouse:Warehouse):Observable<Warehouse[]>{
     return this.http.post<Warehouse[]>(`${this.baseUrl}/${"add_warehouse"}`,warehouse);
   }

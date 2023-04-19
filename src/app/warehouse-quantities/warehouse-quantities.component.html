@@ -4,8 +4,9 @@
         <div class="card-body">
             <table class="table table-striped" style="width:100%">
                 <thead>
+                    <th>Tool ID</th>
                     <th style="width:30%">Tool Name</th>
-                    <th >Program</th>
+                    <th>Program</th>
                     <th>Date Last Updated</th>
                     <th>Language</th>
                     <th>Version</th>
@@ -14,6 +15,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let warehouseQuantity of warehouseQuantities ">
+                        <td>{{warehouseQuantity.warehouseId}}</td>
                         <td>{{warehouseQuantity.toolName}}</td>
                         <td>{{warehouseQuantity.programName}}</td>
                         <td style="text-align: center">{{warehouseQuantity.dateCreated}}</td>
@@ -21,18 +23,12 @@
                         <td style="text-align: center">{{warehouseQuantity.version}}</td>
                         <td style="text-align: center">{{warehouseQuantity.quantityAvailable}}</td>
                         <td>
-                            <tr>
-        
-                              <td><button  class='btn btn-primary' ><i class="fa fa-futboll-0">Disable/Enable</i></button></td>
-                          <td><button  class='btn btn-info'
-                            data-toggle="modal" data-target="#myModal">Update</button></td>
-                          </tr>
-                        <tr>
-                          <td> <button  class='btn btn-info'>User Roles</button></td>
-                          <td> <button  class='btn btn-info'>Renew</button></td>
-                            </tr>
-        
-                          </td>
+                    <tr>
+                        <td><button class='btn btn-primary' (click)="toWarehouseAdd()">Add</button></td>
+                        <td><button class='btn btn-info' (click)="toProvince(warehouseQuantity.warehouseId)">Transfer</button>
+                        </td>
+
+                        </td>
                     </tr>
                 </tbody>
             </table>

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent},
   {path:'register-tool', component:RegisterToolComponent},
   {path:'warehouse-list', component:WarehouseListComponent},
-  {path:'transfer', component:TransferToolsComponent},
+  {path:'transfer/:warehouseId', component:TransferToolsComponent},
   {path:'quantities', component:WarehouseQuantitiesComponent}
 ];
 
